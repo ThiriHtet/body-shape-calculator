@@ -6,7 +6,7 @@ from turtle import bgcolor
 
 from matplotlib.pyplot import grid, text
 tk = t.Tk()
-tk.title('Body Shape Calculator')
+tk.title('Body  Shape  Calculator')
 
 def calculate():
     
@@ -41,16 +41,16 @@ def calculate():
 Label(tk , text = 'Enter Your Bust Size ').grid(row=1)
 Label(tk,text='Enter Your Hip Size ').grid(row=2)
 Label(tk,text='Enter Your waist Size ').grid(row=3)
-trans = IntVar()
-busty = t.Entry(tk,textvariable=trans)
+
+busty = t.Entry(tk)
 busty.grid(row = 1,column=1)
 
-hippy_trans =IntVar()
-hippy = t.Entry(tk,textvariable=hippy_trans)
+
+hippy = t.Entry(tk)
 hippy.grid(row = 2,column=1)
 
-waisty_trans = IntVar()
-waisty = t.Entry(tk,textvariable=waisty_trans)
+
+waisty = t.Entry(tk)
 waisty.grid(row = 3,column=1)
 
 bust = int(busty.get())
@@ -59,5 +59,6 @@ waist = int (waisty.get())
 
 Button(tk, text = "Calculate", bg = 'green',command=calculate).grid(row =1 , column= 2)
 Button(tk,text = "quit",bg = 'red',command= tk.destroy).grid(row = 2, column= 2)
+
 
 tk.mainloop()
